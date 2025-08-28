@@ -4,15 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="container">
-    <h1>🌤 Weather App</h1>
-    <input type="text" id="cityInput" placeholder="Enter city name">
-    <button id="searchBtn" type="button">Get Weather</button>
+<body class="bg-gradient-to-br from-green-200 to-green-100 flex items-center justify-center min-h-screen p-5 font-sans">
 
-    <div id="weatherResult" class="result"></div>
+  <div class="w-full max-w-md bg-white bg-opacity-95 p-8 rounded-3xl shadow-2xl text-center transform transition-transform duration-300 hover:-translate-y-3 hover:shadow-3xl">
+    <h1 class="text-3xl font-extrabold text-green-800 mb-8 tracking-wide">🌤 Weather App</h1>
+
+    <!-- Input -->
+    <input id="cityInput" type="text" placeholder="Enter city name"
+      class="w-full px-5 py-3 mb-5 rounded-2xl border border-green-300 focus:border-green-600 focus:ring-2 focus:ring-green-300 outline-none text-green-900 font-medium transition-all duration-300">
+
+    <!-- Button -->
+    <button id="searchBtn"
+      class="w-full py-3 bg-green-600 text-white font-semibold rounded-2xl hover:bg-green-700 hover:scale-105 transform transition-all duration-300 shadow-md">
+      Get Weather
+    </button>
+
+    <!-- Result -->
+    <div id="weatherResult" class="hidden mt-8 text-green-900 p-6 rounded-2xl transition-all duration-500 shadow-inner">
+      <!-- Weather info will appear here -->
+    </div>
   </div>
 
   <script src="scripts.js"></script>
